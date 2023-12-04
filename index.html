@@ -3,11 +3,11 @@ layout: default
 ---
 
 <div class="posts">
-  <h1>[ Flutter ]</h1>
+  <h1>Flutter</h1>
   {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
       <div class="entry">
         {{ post.excerpt }}
@@ -16,11 +16,11 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-  <h1>[ TryHackme ]</h1>
+  <h1>TryHackme</h1>
   {% for post in site.Tryhackme %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ Tryhackme.url }}">{{ Tryhackme.title }}</a></h1>
+      <h2><a href="{{ site.baseurl }}{{ Tryhackme.url }}">{{ Tryhackme.title }}</a></h2>
 
       <div class="entry">
         {{ post.excerpt }}
