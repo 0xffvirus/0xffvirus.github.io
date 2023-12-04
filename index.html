@@ -20,16 +20,16 @@ layout: default
 </div>
 <div class="posts">
    <h1>TryHackme</h1>
-  {% for post in site.tryhackme %}
+  {% for act in site.tryhackme %}
     <article class="post">
 
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ site.baseurl }}{{ act.url }}">{{ act.title }}</a></h2>
 
       <div class="entry">
-        {{ post.excerpt }}
+        {{ act.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ act.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
 </div>
