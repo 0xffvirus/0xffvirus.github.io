@@ -20,7 +20,7 @@ layout: default
 </div>
 <div class="posts">
    <h1>TryHackme</h1>
-  {% for act in site.tryhackme %}
+  {% for act in site._tryhackme %}
     <article class="post">
 
       <h2><a href="{{ site.baseurl }}{{ act.url }}">{{ act.title }}</a></h2>
