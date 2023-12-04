@@ -15,4 +15,16 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
+  {% for post in site.Tryhackme %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ Tryhackme.url }}">{{ Tryhackme.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ Tryhackme.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
 </div>
