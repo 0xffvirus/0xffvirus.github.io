@@ -19,17 +19,5 @@ layout: default
  
 </div>
 <div class="posts">
-   <h1>TryHackme</h1>
-  {% for act in site.tryhackme %}
-    <article class="post">
-
-      <h2><a href="{{ site.baseurl }}{{ act.url }}">{{ act.title }}</a></h2>
-
-      <div class="entry">
-        {{ act.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ act.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+   <h1><a href="{{ site.baseurl }}/tryhackme">TryHackme</a></h1>
 </div>
