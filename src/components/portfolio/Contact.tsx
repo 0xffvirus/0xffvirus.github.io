@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Send, Github, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Github, Twitter, Instagram, Icon, File } from "lucide-react";
 
 export function Contact() {
   return (
@@ -90,7 +90,8 @@ export function Contact() {
                       {[
                         { href: "https://github.com/0xffvirus", Icon: Github, label: "GitHub" },
                         { href: "https://twitter.com/ceobahaa", Icon: Twitter, label: "Twitter" },
-                        { href: "https://instagram.com/1zsb", Icon: Instagram, label: "Instagram" }
+                        { href: "https://instagram.com/1zsb", Icon: Instagram, label: "Instagram" },
+                        { href: "https://drive.usercontent.google.com/download?id=1pkwAs0WIjUNmaEKO7vDGAHaKapWIWSlM&export=download&authuser=0&confirm=t&uuid=9e8dbfa6-8a23-421f-a593-53e4b599eb80&at=AEz70l6SPMxQNPXNwAusQy6NbP8s:1741725106855", Icon: File, label: "CV" }
                       ].map(({ href, Icon, label }) => (
                         <a
                           key={label}
@@ -107,6 +108,7 @@ export function Contact() {
                   )}
                 </CardContent>
               </Card>
+
             ))}
           </div>
         </div>
