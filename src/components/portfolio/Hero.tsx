@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Twitter, Instagram } from "lucide-react";
 import Link from "next/link";
+import { SkillsScroll } from './SkillsScroll';
 
 export function Hero() {
   return (
-    <section className='relative min-h-screen flex items-center pt-16 overflow-hidden bg-background'>
+    <section className='relative min-h-screen flex flex-col justify-between pt-16 overflow-hidden bg-background'>
       <div className='absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.08),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(149,76,233,0.15),transparent_50%)]'></div>
-      <div className='container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
+      <div className='container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center flex-1'>
         <div className='space-y-6'>
           <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-transparent hover:border-primary/40 hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition-all duration-300">
             <span className="text-primary">Software Engineering Student</span>
@@ -18,8 +19,8 @@ export function Hero() {
             A passionate software engineer building innovative solutions and exploring new technologies.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="bg-primary border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300"
               asChild
@@ -29,8 +30,8 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300"
               asChild
@@ -44,11 +45,11 @@ export function Hero() {
               { href: "https://twitter.com/ceobahaa", Icon: Twitter, label: "Twitter" },
               { href: "https://instagram.com/1zsb", Icon: Instagram, label: "Instagram" }
             ].map(({ href, Icon, label }) => (
-              <Link 
+              <Link
                 key={label}
-                href={href} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition-all duration-300"
               >
                 <Icon className="h-5 w-5" />
@@ -85,6 +86,13 @@ export function Hero() {
             </pre>
           </div>
         </div>
+      </div>
+      {/* Full-width Skills Scroll Animation */}
+
+      <div className='w-full mt-8 mb-0'>
+
+        <SkillsScroll />
+
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ export function Projects() {
       description: "An immersive gaming experience with advanced graphics and physics simulation.",
       tags: ["GDScript", "Godot Engine", "Game Development"],
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800&h=500",
-      code: "https://github.com/0xffvirus/"
+      code: "https://warp-nine.vercel.app/"
     },
     {
       title: "Islamic Adkar App",
@@ -84,7 +84,7 @@ export function Projects() {
 
                   >
                     <Github className="mr-2 h-4 w-4" />
-                    View Code
+                    View Project
                   </Button>
                 </Link>
               </CardFooter>
@@ -105,6 +105,7 @@ export function Projects() {
           </Link>
         </div>
       </div>
+
     </section>
   );
 }
