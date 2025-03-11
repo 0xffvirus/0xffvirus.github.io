@@ -13,7 +13,7 @@ export function Experience() {
     },
     {
       company: 'ByteVectors Studio',
-      role: 'Co-Founder, CEO',
+      role: 'Co-Founder, CTO',
       period: 'Nov 2024 - present',
       description: 'In process of making a game called Warp using Godot Engine.',
       skills: ['Godot Engine', 'Game Development', 'Project Management'],
@@ -30,11 +30,11 @@ export function Experience() {
             My professional journey and projects that have shaped my career.
           </p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto">
           <div className="relative space-y-8">
             <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-border"></div>
-            
+
             {experiences.map((exp, index) => (
               <div key={index} className="relative pl-20">
                 <div className="absolute left-[29px] top-3 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(0,255,255,0.3)]"></div>
@@ -50,13 +50,13 @@ export function Experience() {
                         <span>{exp.period}</span>
                       </div>
                     </div>
-                    
+
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, skillIndex) => (
-                        <Badge 
-                          key={skillIndex} 
+                        <Badge
+                          key={skillIndex}
                           variant="outline"
                           className="bg-transparent border-primary/30 text-primary hover:border-primary hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition-all duration-300"
                         >

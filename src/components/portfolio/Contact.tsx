@@ -15,7 +15,7 @@ export function Contact() {
             Feel free to reach out if you have any questions or want to work together on a project.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <Card className="bg-card border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
             <CardContent className="p-6">
@@ -47,8 +47,8 @@ export function Contact() {
                   </label>
                   <Textarea id="message" placeholder="Your message" rows={5} />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300"
                   variant="outline"
                 >
@@ -58,7 +58,7 @@ export function Contact() {
               </form>
             </CardContent>
           </Card>
-          
+
           <div className="space-y-6">
             {["Contact Information", "Social Media"].map((title, index) => (
               <Card key={title} className="bg-card border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
@@ -72,7 +72,7 @@ export function Contact() {
                         </div>
                         <div>
                           <h4 className="font-medium">Email</h4>
-                          <p className="text-muted-foreground">bahaa.najjar@example.com</p>
+                          <p className="text-muted-foreground">CEO@bahaanajjar.com</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
@@ -92,10 +92,10 @@ export function Contact() {
                         { href: "https://twitter.com/ceobahaa", Icon: Twitter, label: "Twitter" },
                         { href: "https://instagram.com/1zsb", Icon: Instagram, label: "Instagram" }
                       ].map(({ href, Icon, label }) => (
-                        <a 
+                        <a
                           key={label}
-                          href={href} 
-                          target="_blank" 
+                          href={href}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 bg-transparent border border-primary/30 hover:border-primary hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] px-4 py-2 rounded-md transition-all duration-300 text-foreground"
                         >
