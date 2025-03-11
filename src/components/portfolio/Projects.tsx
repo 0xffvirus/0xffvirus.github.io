@@ -18,21 +18,21 @@ export function Projects() {
       title: "Islamic Adkar App",
       description: "Continuously alarming for your prayers and duas | نساعدك في تذكيرك للصلاة والادعية",
       tags: ["Flutter", "Geolocation", "Mobile Development", "API Integration"],
-      image: "https://private-user-images.githubusercontent.com/104843039/410034677-97872d7b-ceb4-4c51-a79a-bc4cb90aa683.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE3MjI4OTMsIm5iZiI6MTc0MTcyMjU5MywicGF0aCI6Ii8xMDQ4NDMwMzkvNDEwMDM0Njc3LTk3ODcyZDdiLWNlYjQtNGM1MS1hNzlhLWJjNGNiOTBhYTY4My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxMVQxOTQ5NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lYzI3OTZiMGYxMzIyYmFiMGNlZDRmOWRkZDU0ZTM2YjEwNjZmNzZhNzgyNjc1MTZjNDYwZTA4YWYwMjJlOWM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.sEGDx16quN5JStWDtGgL6tyZnUfyjtAwH92W1suCTwA",
+      image: "https://i.postimg.cc/L68C5XzM/image.png",
       code: "https://github.com/0xffvirus/islamicadkar"
     },
     {
       title: "Expenser App",
       description: "App Created to help you Count your cash without counting it from the beginning again and again.",
       tags: ["Flutter", "Local Database", "Mobile Development"],
-      image: "https://private-user-images.githubusercontent.com/104843039/410035563-572f2ded-8061-41e9-a3c5-651a31ec31ef.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE3MjI4NTcsIm5iZiI6MTc0MTcyMjU1NywicGF0aCI6Ii8xMDQ4NDMwMzkvNDEwMDM1NTYzLTU3MmYyZGVkLTgwNjEtNDFlOS1hM2M1LTY1MWEzMWVjMzFlZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxMVQxOTQ5MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NDc0ODI3NzViNzYzNzJmYmIyYmVlYzllY2ZhZjYwNzgyMjE2MjVlNGJiMzMwNjkyNmRhN2VkNTBhMGYxNzgzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.VXxp5YR88hBrh0EEgx-i3YqyAeGPLHEVxM4KzC4uN0I",
+      image: "https://i.postimg.cc/C5mcJTpt/image.png",
       code: "https://github.com/0xffvirus/expenser"
     },
     {
       title: "CS2 Cheat Menu",
       description: "A cheat menu for the game Counter-Strike 2",
       tags: ["C#", "Reverse Engineering", "Game Hacking"],
-      image: "https://private-user-images.githubusercontent.com/104843039/410342047-361f4326-f5b1-4f4c-a249-f187ebc56b0a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE3MjI5OTAsIm5iZiI6MTc0MTcyMjY5MCwicGF0aCI6Ii8xMDQ4NDMwMzkvNDEwMzQyMDQ3LTM2MWY0MzI2LWY1YjEtNGY0Yy1hMjQ5LWYxODdlYmM1NmIwYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxMVQxOTUxMzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMmEwNTU3ZDVmY2U2YWVjMzdlMGViZTM3NjIwMDdjNmVmMWUzYjM3N2UwN2Q3NWVmNDYyZjJlMTg2Yzc3ODExJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HuO_0zsqZU7GBbmWeaqNYd0jS6pQUg4XaTZI24cm-lI",
+      image: "https://i.postimg.cc/3wvbhc24/image.png",
       code: "https://github.com/0xffvirus/CS2_Menu"
     },
   ];
