@@ -12,9 +12,9 @@ export function About() {
             I'm a Software Engineering student at KFUPM with a passion for building innovative solutions and exploring new technologies.
           </p>
         </div>
-        
+
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          <Card className='bg-card border-primary/10 hover:border-primary/30 transition-all duration-300 shadow-sm'>
+          <Card className='bg-card border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 shadow-sm'>
             <CardContent className='p-6'>
               <div className="rounded-full bg-primary/10 w-12 h-12 flex items-center justify-center mb-4">
                 <GraduationCap className="h-6 w-6 text-primary" />
@@ -25,8 +25,8 @@ export function About() {
               </p>
             </CardContent>
           </Card>
-          
-          <Card className='bg-card border-primary/10 hover:border-primary/30 transition-all duration-300 shadow-sm'>
+
+          <Card className='bg-card border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 shadow-sm'>
             <CardContent className='p-6'>
               <div className="rounded-full bg-primary/10 w-12 h-12 flex items-center justify-center mb-4">
                 <Code className="h-6 w-6 text-primary" />
@@ -37,8 +37,8 @@ export function About() {
               </p>
             </CardContent>
           </Card>
-          
-          <Card className='bg-card border-primary/10 hover:border-primary/30 transition-all duration-300 shadow-sm'>
+
+          <Card className='bg-card border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 shadow-sm'>
             <CardContent className='p-6'>
               <div className="rounded-full bg-primary/10 w-12 h-12 flex items-center justify-center mb-4">
                 <Briefcase className="h-6 w-6 text-primary" />
@@ -50,8 +50,8 @@ export function About() {
             </CardContent>
           </Card>
         </div>
-        
-        
+
+
       </div>
     </section>
   );

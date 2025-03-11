@@ -50,7 +50,7 @@ export function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden border-primary/10 hover:border-primary/30 transition-all duration-300 flex flex-col">
+            <Card key={index} className="overflow-hidden border-primary/10 hover:border-primary/30 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
