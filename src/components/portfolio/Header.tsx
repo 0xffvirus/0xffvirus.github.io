@@ -44,7 +44,7 @@ export function Header() {
         </nav>
 
         <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMobileMenuOpen(true)}>
-          <Menu className="h-6 w-6" />
+          <Menu className="h-6 w-6 text-white" />
           <span className="sr-only">Open menu</span>
         </Button>
       </div>
@@ -53,28 +53,28 @@ export function Header() {
         <div className="fixed inset-0 bg-background z-50 md:hidden">
           <div className="container flex flex-col h-full">
             <div className="flex items-center justify-between h-16">
-              <Link href="/" className="text-xl font-bold tracking-tight">
+              <Link href="/" className="text-xl font-bold tracking-tight text-white">
                 Bahaa<span className="text-primary">Najjar</span>
               </Link>
-              <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                <X className="h-6 w-6" />
+              <Button className='text-white' variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                <X className="h-6 w-6 text-white" />
                 <span className="sr-only">Close menu</span>
               </Button>
             </div>
-            <nav className="flex flex-col items-center justify-center space-y-8 flex-1">
-              <Link href="#about" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            <nav className="flex flex-col items-center justify-center space-y-8 flex-1 text-white">
+              <Link href="#about" className="text-lg font-medium text-white" onClick={() => setIsMobileMenuOpen(false)}>
                 About
               </Link>
-              <Link href="#projects" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="#projects" className="text-lg font-medium text-white" onClick={() => setIsMobileMenuOpen(false)}>
                 Projects
               </Link>
-              <Link href="#skills" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="#skills" className="text-lg font-medium text-white" onClick={() => setIsMobileMenuOpen(false)}>
                 Skills
               </Link>
-              <Link href="#contact" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="#contact" className="text-lg font-medium text-white" onClick={() => setIsMobileMenuOpen(false)}>
                 Contact
               </Link>
-              <Button variant="default" onClick={() => setIsMobileMenuOpen(false)} asChild>
+              <Button className='text-white' variant="default" onClick={() => setIsMobileMenuOpen(false)} asChild>
                 <a href="#contact">Get In Touch</a>
               </Button>
             </nav>
