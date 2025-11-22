@@ -37,15 +37,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a 
-                href="https://instagram.com/1zsb" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </a>
+             
             </div>
             <p className="text-sm text-muted-foreground">
               © {currentYear} Bahaa Najjar. All rights reserved.
