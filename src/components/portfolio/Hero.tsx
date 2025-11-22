@@ -42,8 +42,7 @@ export function Hero() {
           <div className="flex items-center gap-4 pt-4">
             {[
               { href: "https://github.com/0xffvirus", Icon: Github, label: "GitHub" },
-              { href: "https://twitter.com/ceobahaa", Icon: Twitter, label: "Twitter" },
-              { href: "https://instagram.com/1zsb", Icon: Instagram, label: "Instagram" }
+              { href: "https://twitter.com/ceobahaa", Icon: Twitter, label: "Twitter" }
             ].map(({ href, Icon, label }) => (
               <Link
                 key={label}
