@@ -8,8 +8,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
+    extend: {
+      fontFamily: {
+        sans: ['"Courier New"', 'Courier', 'monospace'],
+        mono: ['"Courier New"', 'Courier', 'monospace'],
+      },
+      colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

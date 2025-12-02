@@ -21,16 +21,16 @@ export function SkillsScroll() {
     const scrollContent = [...skills, ...skills, ...skills];
 
     return (
-        <div className='w-full overflow-hidden py-6 relative bg-background/50 backdrop-blur-sm border-t border-b border-primary/10'>
-            {/* Left fade effect */}
-            <div className='absolute left-0 top-0 h-full w-32 z-10 bg-gradient-to-r from-background to-transparent'></div>
+        <div className='w-full overflow-hidden py-6 relative bg-background border-t border-b border-border'>
+            {/* Left fade effect - removed/simplified for ASCII theme */}
+            <div className='absolute left-0 top-0 h-full w-32 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none'></div>
 
             <div className='skills-scroll-container py-3'>
-                <div className='skills-scroll-track flex gap-20 animate-scroll'>
+                <div className='skills-scroll-track flex gap-20 animate-scroll grayscale'>
                     {scrollContent.map((skill, index) => (
                         <div
                             key={`${skill.name}-${index}`}
-                            className='flex items-center gap-2 px-8 py-2s transition-all duration-300'
+                            className='flex items-center gap-2 px-8 py-2 transition-all duration-0 hover:grayscale-0'
                         >
                             {skill.icon}
                         </div>
@@ -39,7 +39,7 @@ export function SkillsScroll() {
             </div>
 
             {/* Right fade effect */}
-            <div className='absolute right-0 top-0 h-full w-32 z-10 bg-gradient-to-l from-background to-transparent'></div>
+            <div className='absolute right-0 top-0 h-full w-32 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none'></div>
 
             <style jsx global>{`
         @keyframes scroll {

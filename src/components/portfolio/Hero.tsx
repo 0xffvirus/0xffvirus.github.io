@@ -5,35 +5,33 @@ import { SkillsScroll } from './SkillsScroll';
 
 export function Hero() {
   return (
-    <section className='relative min-h-screen flex flex-col justify-between pt-16 overflow-hidden bg-background'>
-      <div className='absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.08),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(149,76,233,0.15),transparent_50%)]'></div>
-      <div className='container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center flex-1'>
+    <section className='relative min-h-screen flex flex-col justify-between pt-16 overflow-hidden bg-background border-b border-border'>
+      <div className='container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center flex-1 py-12'>
         <div className='space-y-6'>
-          <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-transparent hover:border-primary/40 hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition-all duration-300">
-            <span className="text-primary">Software Engineering Student</span>
+          <div className="inline-flex items-center px-3 py-1 border border-foreground/20 bg-transparent">
+            <span className="text-sm font-mono uppercase tracking-wider">Software Engineering Student</span>
           </div>
-          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground'>
-            Hi, I'm <span className='text-primary'>Bahaa Najjar</span>
+          <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground uppercase'>
+            Hi, I'm <span className='bg-foreground text-background px-2'>Bahaa Najjar</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-            A passionate software engineer building innovative solutions and exploring new technologies.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-xl font-mono">
+            {`> A passionate software engineer building innovative solutions and exploring new technologies.`}
           </p>
           <div className="flex flex-wrap gap-4">
             <Button
               size="lg"
               variant="outline"
-              className="bg-primary border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300"
+              className="rounded-none border-2 border-foreground hover:bg-foreground hover:text-background transition-colors duration-0 uppercase font-bold tracking-widest"
               asChild
             >
-              <a href="#projects" className='text-white'>
-                View My Work
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <a href="#projects">
+                [ View My Work ]
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300"
+              className="rounded-none border-2 border-foreground/50 hover:border-foreground hover:bg-transparent transition-colors duration-0 uppercase font-bold tracking-widest"
               asChild
             >
               <a href="#contact" className="text-foreground">Contact Me</a>
@@ -49,7 +47,7 @@ export function Hero() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary hover:shadow-[0_0_10px_rgba(0,255,255,0.3)] transition-all duration-300"
+                className="text-muted-foreground hover:text-foreground border border-transparent hover:border-foreground/20 p-2 transition-all duration-0"
               >
                 <Icon className="h-5 w-5" />
                 <span className="sr-only">{label}</span>
@@ -58,28 +56,39 @@ export function Hero() {
           </div>
         </div>
         <div className='relative hidden lg:block'>
-          <div className='absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-cyan-600/40 to-purple-600/30 opacity-75 blur'></div>
-          <div className='relative bg-background rounded-2xl p-6 shadow-xl'>
-            <div className='flex items-center mb-4'>
+          <div className='relative bg-black border-2 border-white p-6 shadow-[8px_8px_0_0_rgba(255,255,255,0.2)]'>
+            <div className='flex items-center mb-4 border-b border-white/20 pb-2 justify-between'>
+              <div className="text-xs uppercase tracking-widest">Terminal</div>
               <div className='flex space-x-2'>
-                <div className='h-3 w-3 rounded-full bg-red-500'></div>
-                <div className='h-3 w-3 rounded-full bg-yellow-500'></div>
-                <div className='h-3 w-3 rounded-full bg-green-500'></div>
+                <div className='w-3 h-3 border border-white'></div>
+                <div className='w-3 h-3 border border-white'></div>
+                <div className='w-3 h-3 bg-white border border-white'></div>
               </div>
             </div>
-            <pre className='text-sm font-mono'>
+            <pre className='text-sm font-mono overflow-x-auto text-white'>
               <code className='text-foreground'>
-                <span className='text-blue-400'>const</span> <span className='text-green-400'>developer</span> = {'{'}
+                <span className='text-gray-500'>// portfolio.config.js</span>
                 <br />
-                {'  '}name: <span className='text-orange-300'>'Bahaa Najjar'</span>,
+                <span className='text-white'>const</span> <span className='text-white font-bold'>softwareEngineer</span> = {'{'}
                 <br />
-                {'  '}education: <span className='text-orange-300'>'KFUPM'</span>,
+                {'  '}<span className='text-white'>name:</span> <span className='text-gray-300'>'Bahaa Najjar'</span>,
                 <br />
-                {'  '}skills: [<span className='text-orange-300'>'Python'</span>, <span className='text-orange-300'>'Flutter'</span>, <span className='text-orange-300'>'C#'</span>, <span className='text-orange-300'>'Next.js'</span>, ...],
+                {'  '}<span className='text-white'>education:</span> <span className='text-gray-300'>'KFUPM'</span>,
                 <br />
-                {'  '}projects: [<span className='text-orange-300'>'Warp Game'</span>, <span className='text-orange-300'>'Expenser App'</span>, <span className='text-orange-300'>'...'</span>],
+                {'  '}<span className='text-white'>skills:</span> [
                 <br />
-
+                {'    '}<span className='text-gray-300'>'Python'</span>,
+                <br />
+                {'    '}<span className='text-gray-300'>'Flutter'</span>,
+                <br />
+                {'    '}<span className='text-gray-300'>'C#'</span>,
+                <br />
+                {'    '}<span className='text-gray-300'>'Next.js'</span>
+                <br />
+                {'  '}],
+                <br />
+                {'  '}<span className='text-white'>status:</span> <span className='text-white bg-gray-800 px-1'>'READY_TO_WORK'</span>
+                <br />
                 {'}'};
               </code>
             </pre>
@@ -88,10 +97,8 @@ export function Hero() {
       </div>
       {/* Full-width Skills Scroll Animation */}
 
-      <div className='w-full mt-8 mb-0'>
-
+      <div className='w-full mt-8 mb-0 border-t border-border'>
         <SkillsScroll />
-
       </div>
     </section>
   );
