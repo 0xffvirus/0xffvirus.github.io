@@ -3,34 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "Last Trial",
-    description: "An immersive 2D roguelike game published on Steam, built with Godot Engine.",
-    tags: ["GDScript", "Godot", "Steam"],
-    image:
-      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3927360/5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed/ss_5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed.1920x1080.jpg?t=1764249806",
-    url: "https://store.steampowered.com/app/3927360/Last_Trial/",
-  },
-  {
-    title: "Unis Market",
-    description: "A platform for buying and selling products on the university campus.",
-    tags: ["React", "Tailwind", "Supabase"],
-    image: "https://i.ibb.co/8gbwhjpH/image.png",
-    url: "https://unismarket.com",
-  },
-  {
-    title: "Islamic Adkar App",
-    description:
-      "Continuously alarming for your prayers and duas. Built with Flutter for mobile.",
-    tags: ["Flutter", "Mobile", "API"],
-    image: "https://i.postimg.cc/L68C5XzM/image.png",
-    url: "https://github.com/0xffvirus/islamicadkar",
-  },
-];
+import data from "@/data/portfolio.json";
 
 export function Projects() {
+  const { projects } = data;
   return (
     <section id="projects">
       {projects.map((project, i) => (
@@ -95,7 +71,7 @@ export function Projects() {
       {/* View all link */}
       <div className="container py-8 border-b border-[#1a1a1a]">
         <Link
-          href="https://github.com/0xffvirus"
+          href={data.social.github}
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#666] text-[11px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"

@@ -1,9 +1,7 @@
+import data from "@/data/portfolio.json";
+
 export function Marquee() {
-  const items = [
-    "Software Engineer",
-    "Game Developer",
-    "Available for Work",
-  ];
+  const items = data.marquee;
 
   const repeatedItems = [...items, ...items, ...items];
   const content = repeatedItems.join(" • ");

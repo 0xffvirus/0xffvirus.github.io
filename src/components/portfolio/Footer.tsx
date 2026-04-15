@@ -1,22 +1,24 @@
 import Link from "next/link";
+import data from "@/data/portfolio.json";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { social } = data;
 
   return (
     <footer className="border-t border-[#1a1a1a] py-12">
       <div className="container">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
           <a
-            href="mailto:CEO@bahaanajjar.com"
+            href={`mailto:${social.email}`}
             className="text-[#666] text-[13px] font-sans hover:text-white transition-colors duration-200"
           >
-            CEO@bahaanajjar.com
+            {social.email}
           </a>
 
           <div className="flex gap-6">
             <Link
-              href="https://github.com/0xffvirus"
+              href={social.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#777] text-[10px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"
@@ -24,7 +26,7 @@ export function Footer() {
               GitHub
             </Link>
             <Link
-              href="https://twitter.com/ceobahaa"
+              href={social.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#777] text-[10px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"
@@ -32,7 +34,7 @@ export function Footer() {
               Twitter
             </Link>
             <Link
-              href="https://drive.google.com/your-cv-link"
+              href={social.cv}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#777] text-[10px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"

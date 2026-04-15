@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "label": "Software Engineer & Game Developer",
+    "tagline": "Building things that matter.",
+    "cta": {
+      "text": "View my work",
+      "href": "#projects"
+    }
+  },
+  "projects": [
+    {
+      "title": "Last Trial",
+      "description": "An immersive 2D roguelike game published on Steam, built with Godot Engine.",
+      "tags": ["GDScript", "Godot", "Steam"],
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3927360/5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed/ss_5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed.1920x1080.jpg?t=1764249806",
+      "url": "https://store.steampowered.com/app/3927360/Last_Trial/"
+    },
+    {
+      "title": "Unis Market",
+      "description": "A platform for buying and selling products on the university campus.",
+      "tags": ["React", "Tailwind", "Supabase"],
+      "image": "https://i.ibb.co/8gbwhjpH/image.png",
+      "url": "https://unismarket.com"
+    },
+    {
+      "title": "Islamic Adkar App",
+      "description": "Continuously alarming for your prayers and duas. Built with Flutter for mobile.",
+      "tags": ["Flutter", "Mobile", "API"],
+      "image": "https://i.postimg.cc/L68C5XzM/image.png",
+      "url": "https://github.com/0xffvirus/islamicadkar"
+    }
+  ],
+  "experience": [
+    {
+      "label": "Currently",
+      "role": "Software Developer @ BestCircle"
+    },
+    {
+      "label": "Co-founder",
+      "role": "ByteVectors Studio"
+    }
+  ],
+  "marquee": [
+    "Software Engineer",
+    "Game Developer",
+    "Available for Work"
+  ],
+  "social": {
+    "email": "CEO@bahaanajjar.com",
+    "github": "https://github.com/0xffvirus",
+    "twitter": "https://twitter.com/ceobahaa",
+    "cv": "https://drive.google.com/your-cv-link"
+  }
+}
