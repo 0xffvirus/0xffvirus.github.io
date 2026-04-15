@@ -34,6 +34,14 @@ export function Footer() {
               Twitter
             </Link>
             <Link
+              href={social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#777] text-[10px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"
+            >
+              LinkedIn
+            </Link>
+            <Link
               href={social.cv}
               target="_blank"
               rel="noopener noreferrer"

@@ -19,24 +19,24 @@
       "title": "Unis Market",
       "description": "A platform for buying and selling products on the university campus.",
       "tags": ["React", "Tailwind", "Supabase"],
-      "image": "https://i.ibb.co/8gbwhjpH/image.png",
+      "image": "https://i.ibb.co/8n2HGZ3c/image.png",
       "url": "https://unismarket.com"
     },
     {
-      "title": "Islamic Adkar App",
-      "description": "Continuously alarming for your prayers and duas. Built with Flutter for mobile.",
-      "tags": ["Flutter", "Mobile", "API"],
-      "image": "https://i.postimg.cc/L68C5XzM/image.png",
-      "url": "https://github.com/0xffvirus/islamicadkar"
+      "title": "Refit: Reset Your Life",
+      "description": "Privacy-first Flutter app (Android & iOS) for habit streaks, nutrition/macro tracking, and body progress --- fully offline with local storage and bilingual Arabic/English support",
+      "tags": ["Flutter", "HealthKit", "Mobile"],
+      "image": "https://i.ibb.co/DH0MBVvv/deviceframes-1.png",
+      "url": "https://apps.apple.com/sa/app/refit-reset-your-life/id6761937688"
     }
   ],
   "experience": [
     {
       "label": "Currently",
-      "role": "Software Developer @ BestCircle"
+      "role": "Software Developer @ Voluntary Work Unit at KFUPM"
     },
     {
-      "label": "Co-founder",
+      "label": "Co-founder, CTO",
       "role": "ByteVectors Studio"
     }
   ],
@@ -49,6 +49,7 @@
     "email": "CEO@bahaanajjar.com",
     "github": "https://github.com/0xffvirus",
     "twitter": "https://twitter.com/ceobahaa",
+    "linkedin": "https://linkedin.com/in/0xbahaa",
     "cv": "https://drive.google.com/your-cv-link"
   }
 }

@@ -4,6 +4,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { Showreel } from "@/components/portfolio/Showreel";
 import { Marquee } from "@/components/portfolio/Marquee";
 import { Projects } from "@/components/portfolio/Projects";
+import { Articles } from "@/components/portfolio/Articles";
 import { ExperienceStrip } from "@/components/portfolio/ExperienceStrip";
 import { Footer } from "@/components/portfolio/Footer";
 import { CursorLight } from "@/components/portfolio/CursorLight";
@@ -29,9 +30,10 @@ export default function Home() {
 
       <main>
         <Hero />
-        <Showreel />
+        {/* <Showreel /> */}
         <Marquee />
         <Projects />
+        <Articles />
         <ExperienceStrip />
       </main>
 
