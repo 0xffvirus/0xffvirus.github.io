@@ -1,35 +1,41 @@
-import Head from 'next/head'
-import { Header } from '@/components/portfolio/Header'
-import { Hero } from '@/components/portfolio/Hero'
-import { About } from '@/components/portfolio/About'
-import { Projects } from '@/components/portfolio/Projects'
-import { Contact } from '@/components/portfolio/Contact'
-import { Footer } from '@/components/portfolio/Footer'
-import { Experience } from '@/components/portfolio/Experience'
-import { CursorLight } from '@/components/portfolio/CursorLight'
+import Head from "next/head";
+import { Header } from "@/components/portfolio/Header";
+import { Hero } from "@/components/portfolio/Hero";
+import { Showreel } from "@/components/portfolio/Showreel";
+import { Marquee } from "@/components/portfolio/Marquee";
+import { Projects } from "@/components/portfolio/Projects";
+import { ExperienceStrip } from "@/components/portfolio/ExperienceStrip";
+import { Footer } from "@/components/portfolio/Footer";
+import { CursorLight } from "@/components/portfolio/CursorLight";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Bahaa Najjar | Software Engineer</title>
-        <meta name='description' content='Portfolio of Bahaa Najjar - Software Engineering Student at KFUPM' />
-        <meta name='keywords' content='Bahaa Najjar, Software Engineer, KFUPM, Portfolio, Developer, Programming' />
-        <link rel='icon' href='/favicon.ico' />
+        <title>Bahaa Najjar — Software Engineer & Game Developer</title>
+        <meta
+          name="description"
+          content="Portfolio of Bahaa Najjar — Software Engineer & Game Developer. Building digital experiences with code."
+        />
+        <meta
+          name="keywords"
+          content="Bahaa Najjar, Software Engineer, Game Developer, Portfolio, Next.js, Flutter, Godot"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <CursorLight />
       <Header />
-      
-      <main className="dark">
+
+      <main>
         <Hero />
-        <About />
+        <Showreel />
+        <Marquee />
         <Projects />
-        <Experience />
-        <Contact />
+        <ExperienceStrip />
       </main>
-      
+
       <Footer />
     </>
-  )
+  );
 }
