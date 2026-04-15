@@ -19,11 +19,16 @@ Complete visual identity overhaul of Bahaa Najjar's portfolio site (0xffvirus.gi
 | Hero tagline | Georgia / Playfair Display | Italic | 48-64px | Centered, serif, single statement |
 | Section labels | Inter / system sans-serif | Uppercase, letter-spacing 0.2em | 11-12px | Small caps feel |
 | Project titles | Georgia / Playfair Display | Italic | 28-36px | Left-aligned within project cards |
-| Body text | Inter / system sans-serif | Normal | 14-16px | Color: #555 |
+| Body text | Inter / system sans-serif | Normal | 14-16px | Color: #777 (WCAG AA) |
 | Nav / buttons | Inter / system sans-serif | Uppercase, letter-spacing 0.1-0.15em | 11-12px | Structural text |
 | Marquee | Inter / system sans-serif | Uppercase, letter-spacing 0.2em | 12-14px | Color: #333, scrolling |
 
-**Font loading**: Use `next/font` to load Inter (sans) and Playfair Display (serif) from Google Fonts. Fall back to Georgia for serif, system-ui for sans.
+**Font loading**: Use `next/font/google` in `src/pages/_app.tsx` to load Inter (sans) and Playfair Display (serif). Apply font CSS variables to `<main>` or `<body>`:
+```tsx
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' })
+```
+Then reference `--font-sans` and `--font-serif` in `tailwind.config.ts` font families. Fall back to Georgia for serif, system-ui for sans.
 
 **Monospace is removed entirely** from the design. No more Courier New.
 
@@ -31,16 +36,32 @@ Complete visual identity overhaul of Bahaa Najjar's portfolio site (0xffvirus.gi
 
 Dark-only. No light mode, no theme toggle.
 
+**CSS variable format**: Switch from the current `hsl(var(--...))` wrapper pattern to direct hex values. Update `tailwind.config.ts` color references accordingly — remove the `hsl()` wrappers and reference variables directly (e.g., `var(--background)` instead of `hsl(var(--background))`).
+
 | Token | Value | Usage |
 |-------|-------|-------|
 | `--background` | `#050505` | Page background |
 | `--foreground` | `#ffffff` | Primary text, headings |
-| `--text-secondary` | `#555555` | Body text, descriptions |
+| `--text-secondary` | `#777777` | Body text, descriptions (WCAG AA compliant ~4.8:1 contrast) |
 | `--text-muted` | `#333333` | Marquee text, very subtle labels |
 | `--border` | `#1a1a1a` | Section dividers, card borders |
 | `--border-hover` | `#333333` | Border on hover states |
+| `--card` | `#0a0a0a` | Card/showreel backgrounds |
+| `--primary` | `#ffffff` | Buttons, interactive elements |
+| `--primary-foreground` | `#050505` | Text on primary bg |
+| `--secondary` | `#1a1a1a` | Secondary backgrounds |
+| `--secondary-foreground` | `#ffffff` | Text on secondary bg |
+| `--muted` | `#111111` | Muted backgrounds |
+| `--muted-foreground` | `#777777` | Muted text |
+| `--accent` | `#ffffff` | Accent = primary (grayscale) |
+| `--accent-foreground` | `#050505` | Text on accent bg |
+| `--destructive` | `#ff0000` | Error states (kept) |
+| `--ring` | `#333333` | Focus ring color |
+| `--input` | `#1a1a1a` | Input borders |
 
-No accent colors. Pure grayscale hierarchy.
+This provides a complete token set so shadcn/ui components (if ever used) render correctly with the new palette. No accent colors beyond grayscale.
+
+**Remove light mode variables entirely** from globals.css. Only the dark palette exists.
 
 ## Layout & Spacing
 
@@ -64,7 +85,7 @@ Fixed/sticky navigation bar.
 - **CTA**: "Get in touch" — 1px border #333, padding 6px 16px, uppercase, hover border #fff
 - **Scroll behavior**: Transparent at top, `backdrop-blur-md bg-black/50` on scroll
 - **Border**: `border-b border-[#1a1a1a]` always visible
-- **Mobile**: Logo left, hamburger icon right. Full-screen overlay menu with centered vertical nav links.
+- **Mobile**: Logo left, hamburger icon right. Full-screen overlay menu with centered vertical nav links. Menu animates: fade in background (200ms), then links slide up staggered (100ms each, 0.4s ease-out). Close reverses.
 
 ### 2. Hero
 
@@ -79,7 +100,7 @@ Centered, typographic hero. No code blocks, no terminal aesthetic.
             [ VIEW MY WORK ]                             ← outline button
 ```
 
-- **Label**: Sans-serif, uppercase, letter-spacing 0.25em, color #555, 11px
+- **Label**: Sans-serif, uppercase, letter-spacing 0.25em, color #777, 11px
 - **Tagline**: Serif italic, 48-64px, white, line-height 1.15, max-width ~600px, centered
 - **CTA**: Outline button — 1px border #333, uppercase sans-serif, letter-spacing 0.15em, hover border #fff
 - **Spacing**: `pt-32 pb-20` (hero breathes, but flows into showreel)
@@ -134,7 +155,7 @@ A 2D roguelike game published on Steam.
 
 - **Title row**: Serif italic title (28-36px, white) left, tech stack labels (sans, uppercase, 10px, #555) right
 - **Image**: Full-width, `aspect-video`, `border border-[#1a1a1a]`, grayscale by default, color on hover (500ms transition)
-- **Description**: Sans-serif, 14px, color #555, max-width ~500px, margin-top 12px
+- **Description**: Sans-serif, 14px, color #777, max-width ~500px, margin-top 12px
 - **Each project separated by**: `border-b border-[#1a1a1a]`, `py-16 md:py-20`
 - **Link**: Entire card is clickable, arrow icon (↗) appears on hover next to title
 - **"View All" link**: After last project, small "View all projects →" link to GitHub profile
@@ -149,7 +170,7 @@ Software Developer @ BestCircle          ByteVectors Studio
 ```
 
 - **Layout**: Flex row, `justify-between`, two columns
-- **Label**: Sans-serif, uppercase, letter-spacing 0.15em, 9px, color #555
+- **Label**: Sans-serif, uppercase, letter-spacing 0.15em, 9px, color #777
 - **Role text**: Sans-serif, 14px, white
 - **Borders**: `border-y border-[#1a1a1a]`, `py-6`
 - **No descriptions or dates** — just title + company. Minimal.
@@ -165,7 +186,7 @@ CEO@bahaanajjar.com                     GitHub  Twitter  CV
 
 - **Layout**: Flex row top, centered copyright below
 - **Email**: Sans-serif, 13px, color #666, hover #fff
-- **Social links**: Sans-serif, uppercase, 10px, color #555, hover #fff
+- **Social links**: Sans-serif, uppercase, 10px, color #777, hover #fff
 - **Copyright**: Sans-serif, 11px, color #333, centered, margin-top 16px
 - **Spacing**: `py-12`, `border-t border-[#1a1a1a]`
 
@@ -232,10 +253,30 @@ Keep the existing `CursorLight` component (mix-blend-difference white circle). I
 | `src/components/portfolio/Contact.tsx` | Section removed |
 | `src/components/portfolio/Experience.tsx` | Replaced by ExperienceStrip |
 
+## Theme Provider Removal
+
+Remove `next-themes` usage:
+- Remove `ThemeProvider` wrapper from `src/pages/_app.tsx`
+- Remove `useTheme` import from Header
+- Hardcode `className="dark"` on `<html>` element in `_document.tsx` (or just style everything directly since there's only one theme)
+- `next-themes` package can stay in package.json (no harm), but is no longer imported
+
+## SEO Updates
+
+Update `<Head>` in `index.tsx`:
+- Title: "Bahaa Najjar — Software Engineer & Game Developer"
+- Description: Updated to match new identity (no more "student" framing)
+- Keywords: Updated to reflect portfolio focus
+
+## Dependency Cleanup
+
+- Remove `devicons-react` from package.json (only used in deleted SkillsScroll)
+- `next-themes` can remain (no harm) but all imports removed
+
 ## What Stays Unchanged
 
 - Next.js 14 framework, static export, Vercel deployment
-- shadcn/ui component library (unused components stay, no harm)
+- shadcn/ui component library (unused components stay, tokens now mapped to new palette)
 - Project data (titles, descriptions, links, images) — just displayed differently
 - CursorLight component
-- All config files except tailwind.config.ts and globals.css
+- All config files except tailwind.config.ts, globals.css, _app.tsx, _document.tsx
