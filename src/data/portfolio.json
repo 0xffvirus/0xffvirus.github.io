@@ -1,55 +1,109 @@
 {
-  "hero": {
-    "label": "Software Engineer & Game Developer",
-    "tagline": "Building things that matter.",
-    "cta": {
-      "text": "View my work",
-      "href": "#projects"
-    }
-  },
-  "projects": [
-    {
-      "title": "Last Trial",
-      "description": "An immersive 2D roguelike game published on Steam, built with Godot Engine.",
-      "tags": ["GDScript", "Godot", "Steam"],
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3927360/5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed/ss_5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed.1920x1080.jpg?t=1764249806",
-      "url": "https://store.steampowered.com/app/3927360/Last_Trial/"
-    },
-    {
-      "title": "Unis Market",
-      "description": "A platform for buying and selling products on the university campus.",
-      "tags": ["React", "Tailwind", "Supabase"],
-      "image": "https://i.ibb.co/8n2HGZ3c/image.png",
-      "url": "https://unismarket.com"
-    },
-    {
-      "title": "Refit: Reset Your Life",
-      "description": "Privacy-first Flutter app (Android & iOS) for habit streaks, nutrition/macro tracking, and body progress --- fully offline with local storage and bilingual Arabic/English support",
-      "tags": ["Flutter", "HealthKit", "Mobile"],
-      "image": "https://i.ibb.co/DH0MBVvv/deviceframes-1.png",
-      "url": "https://apps.apple.com/sa/app/refit-reset-your-life/id6761937688"
-    }
-  ],
-  "experience": [
-    {
-      "label": "Currently",
-      "role": "Software Developer @ Voluntary Work Unit at KFUPM"
-    },
-    {
-      "label": "Co-founder, CTO",
-      "role": "ByteVectors Studio"
-    }
-  ],
-  "marquee": [
-    "Software Engineer",
-    "Game Developer",
-    "Available for Work"
-  ],
   "social": {
     "email": "CEO@bahaanajjar.com",
     "github": "https://github.com/0xffvirus",
     "twitter": "https://twitter.com/ceobahaa",
     "linkedin": "https://linkedin.com/in/0xbahaa",
     "cv": "https://drive.google.com/your-cv-link"
+  },
+  "locales": {
+    "en": {
+      "hero": {
+        "label": "Software Engineer & Game Developer",
+        "tagline": "Building things that matter.",
+        "cta": {
+          "text": "View my work",
+          "href": "#projects"
+        }
+      },
+      "projects": [
+        {
+          "title": "Last Trial",
+          "description": "An immersive 2D roguelike game published on Steam, built with Godot Engine.",
+          "tags": ["GDScript", "Godot", "Steam"],
+          "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3927360/5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed/ss_5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed.1920x1080.jpg?t=1764249806",
+          "url": "https://store.steampowered.com/app/3927360/Last_Trial/"
+        },
+        {
+          "title": "Unis Market",
+          "description": "A platform for buying and selling products on the university campus.",
+          "tags": ["React", "Tailwind", "Supabase"],
+          "image": "https://i.ibb.co/8n2HGZ3c/image.png",
+          "url": "https://unismarket.com"
+        },
+        {
+          "title": "Refit: Reset Your Life",
+          "description": "Privacy-first Flutter app (Android & iOS) for habit streaks, nutrition/macro tracking, and body progress --- fully offline with local storage and bilingual Arabic/English support",
+          "tags": ["Flutter", "HealthKit", "Mobile"],
+          "image": "https://i.ibb.co/DH0MBVvv/deviceframes-1.png",
+          "url": "https://apps.apple.com/sa/app/refit-reset-your-life/id6761937688"
+        }
+      ],
+      "experience": [
+        {
+          "label": "Currently",
+          "role": "Software Developer @ Voluntary Work Unit at KFUPM"
+        },
+        {
+          "label": "Co-founder, CTO",
+          "role": "ByteVectors Studio"
+        }
+      ],
+      "marquee": [
+        "Currently shipping Last Trial",
+        "Reading about ECS architectures",
+        "Building with Godot 4",
+        "Open to collaborations"
+      ]
+    },
+    "ar": {
+      "hero": {
+        "label": "مهندس برمجيات ومطوّر ألعاب",
+        "tagline": "أصنع أشياء تترك أثرًا.",
+        "cta": {
+          "text": "اطّلع على أعمالي",
+          "href": "#projects"
+        }
+      },
+      "projects": [
+        {
+          "title": "Last Trial",
+          "description": "لعبة rogue-lite ثنائية الأبعاد غامرة، منشورة على Steam، مصنوعة بمحرك Godot.",
+          "tags": ["GDScript", "Godot", "Steam"],
+          "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3927360/5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed/ss_5e9f2a9f34e163454ee6a7108a23d5f7292bd6ed.1920x1080.jpg?t=1764249806",
+          "url": "https://store.steampowered.com/app/3927360/Last_Trial/"
+        },
+        {
+          "title": "Unis Market",
+          "description": "منصّة لبيع وشراء المنتجات داخل الحرم الجامعي.",
+          "tags": ["React", "Tailwind", "Supabase"],
+          "image": "https://i.ibb.co/8n2HGZ3c/image.png",
+          "url": "https://unismarket.com"
+        },
+        {
+          "title": "Refit: Reset Your Life",
+          "description": "تطبيق Flutter يضع الخصوصية أولًا (أندرويد و iOS) لتتبّع العادات والتغذية والماكروز والتقدّم البدني — يعمل بالكامل دون إنترنت مع تخزين محلي ودعم ثنائي اللغة عربي/إنجليزي.",
+          "tags": ["Flutter", "HealthKit", "Mobile"],
+          "image": "https://i.ibb.co/DH0MBVvv/deviceframes-1.png",
+          "url": "https://apps.apple.com/sa/app/refit-reset-your-life/id6761937688"
+        }
+      ],
+      "experience": [
+        {
+          "label": "حاليًا",
+          "role": "مطوّر برمجيات @ وحدة العمل التطوعي بجامعة الملك فهد للبترول والمعادن"
+        },
+        {
+          "label": "شريك مؤسس، رئيس التقنية",
+          "role": "استوديو ByteVectors"
+        }
+      ],
+      "marquee": [
+        "أعمل حاليًا على Last Trial",
+        "أقرأ عن معماريّات ECS",
+        "أبني بـ Godot 4",
+        "منفتح للتعاون"
+      ]
+    }
   }
 }

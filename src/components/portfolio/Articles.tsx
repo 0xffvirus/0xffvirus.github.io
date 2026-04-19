@@ -1,28 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArticleList } from "@/components/articles/ArticleList";
+import { useI18n } from "@/contexts/LanguageContext";
+import type { ArticleMeta } from "@/lib/article-format";
 
-export function Articles() {
+type Props = {
+  articles: ArticleMeta[];
+};
+
+export function Articles({ articles }: Props) {
+  const { t } = useI18n();
   return (
-    <motion.section
-      id="articles"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="border-b border-[#1a1a1a] py-24 md:py-32"
-    >
-      <div className="container text-center">
-        <span className="text-[#777] text-[11px] uppercase tracking-[0.25em] font-sans block mb-4">
-          Articles
-        </span>
-        <h2 className="text-2xl md:text-3xl font-serif italic text-white">
-          Coming soon.
-        </h2>
-        <p className="text-[#777] text-sm font-sans mt-4 max-w-md mx-auto leading-relaxed">
-          I'm working on writing about software engineering, game development, and things I learn along the way.
-        </p>
-      </div>
-    </motion.section>
+    <>
+      <ArticleList
+        articles={articles}
+        heading={t.articles.sectionLabel}
+        emptyMessage={t.articles.empty}
+      />
+      {articles.length > 0 ? (
+        <div className="container py-8 border-b border-[#1a1a1a]">
+          <Link
+            href="/articles"
+            className="text-[#666] text-[11px] uppercase tracking-[0.1em] font-sans hover:text-white transition-colors duration-200"
+          >
+            {t.articles.viewAll}
+          </Link>
+        </div>
+      ) : null}
+    </>
   );
 }

@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import data from "@/data/portfolio.json";
+import { useI18n } from "@/contexts/LanguageContext";
 
 export function Hero() {
-  const { label, tagline, cta } = data.hero;
+  const { content } = useI18n();
+  const { label, tagline, cta } = content.hero;
 
   return (
     <section className="pt-32 pb-20 border-b border-[#1a1a1a]">
@@ -22,7 +23,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-          className="text-4xl md:text-5xl lg:text-6xl font-serif italic text-white leading-[1.15] max-w-[600px]"
+          className="hero-tagline text-4xl md:text-5xl lg:text-6xl font-serif italic text-white leading-[1.15] max-w-[600px]"
         >
           {tagline}
         </motion.h1>

@@ -45,3 +45,100 @@
     @apply mx-auto px-6 md:px-8 max-w-5xl w-full;
   }
 }
+
+/* Arabic locale — swap every text family to TheYearofHandicrafts (except
+   monospace, which stays for code blocks), drop italics since the Arabic
+   script does not italicize, and let `dir="rtl"` flow the layout naturally. */
+html[dir="rtl"] body,
+html[dir="rtl"] .font-sans,
+html[dir="rtl"] .font-serif,
+html[dir="rtl"] .font-serif-body {
+  font-family: var(--font-arabic), system-ui, sans-serif;
+}
+
+html[dir="rtl"] .italic {
+  font-style: normal;
+}
+
+html[dir="rtl"] .hero-tagline {
+  line-height: 1.5;
+}
+
+/* Small English-caps labels (text-[11px]/text-[10px] with wide tracking) are
+   too cramped in Arabic and letter-spacing breaks cursive joining. */
+html[dir="rtl"] [class*="text-[11px]"] {
+  font-size: 13px;
+  letter-spacing: 0 !important;
+}
+html[dir="rtl"] [class*="text-[10px]"] {
+  font-size: 12px;
+  letter-spacing: 0 !important;
+}
+
+html[dir="rtl"] .article-body p,
+html[dir="rtl"] .article-body li,
+html[dir="rtl"] .article-body blockquote {
+  line-height: 2.1;
+}
+
+/* Article code blocks (rehype-pretty-code output) ---------------------------- */
+.article-body figure[data-rehype-pretty-code-figure] {
+  margin: 2rem 0;
+}
+
+.article-body pre[data-language] {
+  position: relative;
+  direction: ltr;
+  text-align: left;
+  margin: 0;
+  padding: 2.25rem 1.25rem 1.25rem;
+  border: 1px solid #1a1a1a;
+  background: #0a0a0a;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.article-body pre[data-language] > code {
+  display: block;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.article-body pre[data-language] [data-line] {
+  display: block;
+}
+
+.article-body pre[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+  pointer-events: none;
+}
+
+.article-body pre[data-language="plaintext"]::before,
+.article-body pre[data-language="text"]::before {
+  content: none;
+}
+
+.article-body pre[data-language]::-webkit-scrollbar {
+  height: 6px;
+}
+.article-body pre[data-language]::-webkit-scrollbar-track {
+  background: transparent;
+}
+.article-body pre[data-language]::-webkit-scrollbar-thumb {
+  background: #222;
+}
+.article-body pre[data-language]::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}

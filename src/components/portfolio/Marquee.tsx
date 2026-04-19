@@ -1,20 +1,23 @@
-import data from "@/data/portfolio.json";
+"use client";
+
+import { useI18n } from "@/contexts/LanguageContext";
 
 export function Marquee() {
-  const items = data.marquee;
+  const { content } = useI18n();
+  const items = content.marquee;
 
   const repeatedItems = [...items, ...items, ...items];
-  const content = repeatedItems.join(" • ");
+  const joined = repeatedItems.join(" • ");
 
   return (
     <section className="border-b border-[#1a1a1a] py-3 overflow-hidden">
       <div className="relative">
         <div className="flex whitespace-nowrap animate-marquee hover:[animation-play-state:paused]">
           <span className="text-[#333] text-xs uppercase tracking-[0.2em] font-sans px-4">
-            {content}
+            {joined}
           </span>
           <span className="text-[#333] text-xs uppercase tracking-[0.2em] font-sans px-4">
-            {content}
+            {joined}
           </span>
         </div>
       </div>

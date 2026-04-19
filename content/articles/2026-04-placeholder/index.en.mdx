@@ -1,0 +1,68 @@
+---
+title: "On writing in a repo you control"
+subtitle: "Why Obsidian plus MDX beat a CMS for my portfolio."
+date: "2026-04-19"
+tag: "Engineering"
+excerpt: "I didn't want to fight a rich-text editor every time I had something to say. Here's the setup I landed on."
+---
+
+This is the reader. You're looking at it.
+
+The body renders in Source Serif 4. Headings stay in Playfair italic so the
+editorial tone carries over from the rest of the site. Meta lines (date,
+reading time, tag) stay in Inter so they read as scaffolding rather than
+content.
+
+## Writing
+
+Writing happens in Obsidian. The vault is rooted at `content/articles/`,
+attachments are saved next to each note, and Markdown is the native format. No
+WYSIWYG, no database, no login, no rate limits, no one to email when something
+breaks.
+
+When I paste an image, Obsidian drops the file into the article's folder and
+inserts a standard Markdown reference. The build copies images from
+`content/articles/<slug>/` into `public/articles/<slug>/` and rewrites
+relative paths. The MDX stays portable — previews work inside Obsidian and on
+the live site identically.
+
+## Code
+
+Syntax highlighting is baked at build time with Shiki via
+`rehype-pretty-code`. No runtime cost. The `github-dark-dimmed` theme matches
+the rest of the palette.
+
+```ts
+export type ArticleMeta = {
+  slug: string;
+  title: string;
+  subtitle?: string;
+  date: string;
+  tag: string;
+  excerpt: string;
+  readingTime: string;
+};
+```
+
+Inline `code` shows up as a quiet pill — useful for `filenames`, `flags`, and
+the occasional `identifier`.
+
+## Links and emphasis
+
+Body links look like [this](https://bahaanajjar.com) — underlined, white, no
+color accent. Strong text is **bold white**, emphasis is *italic*. Lists
+inherit the same reading serif:
+
+- Small units, well-bounded.
+- Narrow column, ~680px.
+- Generous leading.
+
+> Good prose is a well-lit room. Good formatting is the lamp.
+
+## What this file is
+
+A placeholder. Replace it with the first real article whenever you're ready.
+Create a new folder under `content/articles/` (e.g. `2026-05-shipping-alone`),
+add an `index.mdx` with frontmatter, write, paste images, commit.
+
+That's the whole workflow.
